@@ -1,6 +1,6 @@
 const logoUrls = {
-    header: "https://via.placeholder.com/200x50/2ecc71/ffffff?text=YOUR+LOGO+HERE",
-    footer: "https://via.placeholder.com/250x60/2ecc71/ffffff?text=YOUR+LOGO+HERE" 
+    header: "https://ibb.co/TMKq9hN9",
+    footer: "https://ibb.co/TMKq9hN9" 
 };
 
 document.addEventListener('DOMContentLoaded', function() {
