@@ -1,6 +1,6 @@
 const logoUrls = {
-    header: "https://ibb.co/TMKq9hN9",
-    footer: "https://ibb.co/TMKq9hN9" 
+    header: "https://i.ibb.co/GQs3zPrz/image-removebg-preview.png",
+    footer: "https://i.ibb.co/GQs3zPrz/image-removebg-preview.png" 
 };
 
 document.addEventListener('DOMContentLoaded', function() {
