@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -395,7 +395,7 @@
             margin: 0 auto;
         }
 
-        /* Projects Gallery Area - EMPTY FOR YOU TO ADD IMAGES */
+        /* Projects Gallery Area - UPDATED FOR ORIGINAL IMAGE SIZES */
         .projects-gallery {
             max-width: 1400px;
             margin: 50px auto;
@@ -414,19 +414,25 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             background: white;
-            aspect-ratio: 4/3;
+            /* Removed aspect-ratio to allow natural height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
         }
 
         .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
             display: block;
             transition: transform 0.5s;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         /* Call to Action Section */
@@ -683,6 +689,10 @@
                 grid-template-columns: 1fr;
             }
             
+            .gallery-item img {
+                max-height: 70vh;
+            }
+            
             .footer-content {
                 grid-template-columns: 1fr;
             }
@@ -720,6 +730,14 @@
             
             .footer-logo-image {
                 height: 60px;
+            }
+            
+            .gallery-item {
+                padding: 5px;
+            }
+            
+            .gallery-item img {
+                max-height: 60vh;
             }
         }
 
@@ -1074,16 +1092,6 @@
                 </div>
             </section>
         </section>
-
-            <!-- Call to Action Section -->
-            <section class="cta-section">
-                <div class="cta-content">
-                    <h2>Need your house to be renovated?</h2>
-                    <p>Contact us today for a free consultation and quote. Our team is ready to bring your vision to life with quality craftsmanship and professional service.</p>
-                    <button class="btn btn-primary" onclick="showPage('contact')">Contact Us</button>
-                </div>
-            </section>
-        </section>
         
         <footer>
             <div class="footer-content">
@@ -1241,12 +1249,22 @@
             
             // Initialize animations for the page
             setTimeout(initAnimations, 100);
+            
+            // Initialize gallery images if on projects page
+            if (pageId === 'projects') {
+                setTimeout(initGalleryImages, 300);
+            }
         }
 
         // Initialize on load
         document.addEventListener('DOMContentLoaded', function() {
             setupEventListeners();
             initAnimations();
+            
+            // Initialize gallery images if on projects page initially
+            if (document.getElementById('projectsPage').classList.contains('active')) {
+                setTimeout(initGalleryImages, 300);
+            }
         });
 
         function setupEventListeners() {
@@ -1269,6 +1287,24 @@
             
             // Scroll animations
             window.addEventListener('scroll', checkScroll);
+        }
+
+        // Gallery Image Loading
+        function initGalleryImages() {
+            const images = document.querySelectorAll('.gallery-item img');
+            images.forEach(img => {
+                // Check if image is already loaded
+                if (img.complete) {
+                    console.log(`Image loaded: ${img.naturalWidth} x ${img.naturalHeight}`);
+                } else {
+                    img.onload = function() {
+                        console.log(`Image loaded: ${this.naturalWidth} x ${this.naturalHeight}`);
+                    };
+                    img.onerror = function() {
+                        console.error('Failed to load image:', this.src);
+                    };
+                }
+            });
         }
 
         // Contact Form Handling
