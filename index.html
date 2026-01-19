@@ -531,8 +531,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             line-height: 1.6;
             overflow-x: hidden;
         }
-
-        /* Page Management */
         .page {
             display: none;
             min-height: calc(100vh - 200px);
@@ -541,8 +539,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
         .page.active {
             display: block;
         }
-
-        /* Header & Navigation */
         header {
             position: fixed;
             top: 0;
@@ -557,26 +553,22 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             align-items: center;
             transition: all 0.3s ease;
         }
-
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
         .logo-image {
             height: 60px;
             width: auto;
             max-width: 200px;
             object-fit: contain;
         }
-
         nav ul {
             display: flex;
             list-style: none;
             gap: 30px;
         }
-
         nav ul li a {
             text-decoration: none;
             color: var(--secondary);
@@ -587,11 +579,9 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             padding: 5px 0;
             cursor: pointer;
         }
-
         nav ul li a:hover {
             color: var(--primary);
         }
-
         nav ul li a::after {
             content: '';
             position: absolute;
@@ -602,11 +592,9 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             background-color: var(--primary);
             transition: width 0.3s;
         }
-
         nav ul li a:hover::after {
             width: 100%;
         }
-
         .nav-btn {
             padding: 10px 20px;
             border-radius: 4px;
@@ -619,13 +607,10 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             text-decoration: none;
             display: inline-block;
         }
-
         .nav-btn:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
         }
-
-        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -639,33 +624,28 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             padding: 0 20px;
             margin-top: 90px;
         }
-
         .hero-content {
             max-width: 800px;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeUp 1s forwards 0.5s;
         }
-
         @keyframes fadeUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0.9;
         }
-
         .btn {
             padding: 12px 30px;
             border-radius: 4px;
@@ -676,37 +656,29 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             font-size: 16px;
             display: inline-block;
         }
-
         .btn-primary {
             background-color: var(--primary);
             color: white;
         }
-
         .btn-primary:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
         }
-
         .btn-secondary {
             background-color: var(--secondary);
             color: white;
         }
-
         .btn-secondary:hover {
             background-color: #152a47;
             transform: translateY(-2px);
         }
-
-        /* Sections */
         .section {
             padding: 100px 5%;
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 60px;
         }
-
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--secondary);
@@ -714,7 +686,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             display: inline-block;
             margin-bottom: 15px;
         }
-
         .section-title h2::after {
             content: '';
             position: absolute;
@@ -725,8 +696,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             height: 4px;
             background-color: var(--primary);
         }
-
-        /* About Section */
         .about-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -735,7 +704,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             gap: 50px;
             align-items: center;
         }
-
         .about-text {
             opacity: 0;
             transform: translateX(-50px);
@@ -746,19 +714,16 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             opacity: 1;
             transform: translateX(0);
         }
-
         .about-text h3 {
             font-size: 2rem;
             color: var(--secondary);
             margin-bottom: 20px;
         }
-
         .about-text p {
             margin-bottom: 20px;
             color: var(--gray);
             font-size: 1.1rem;
         }
-
         .about-image {
             border-radius: 10px;
             overflow: hidden;
@@ -767,28 +732,22 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             transform: translateX(50px);
             transition: all 0.8s ease 0.2s;
         }
-
         .about-image.animated {
             opacity: 1;
             transform: translateX(0);
         }
-
         .about-image img {
             width: 100%;
             height: auto;
             display: block;
             transition: transform 0.5s;
         }
-
         .about-image:hover img {
             transform: scale(1.05);
         }
-
-        /* Services Section */
         .services {
             background-color: var(--light);
         }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -796,7 +755,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .service-card {
             background-color: white;
             border-radius: 8px;
@@ -806,17 +764,14 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             opacity: 0;
             transform: translateY(50px);
         }
-
         .service-card.animated {
             opacity: 1;
             transform: translateY(0);
         }
-
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-
         .service-icon {
             background-color: var(--primary);
             color: white;
@@ -825,18 +780,14 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             text-align: center;
             font-weight: bold;
         }
-
         .service-content {
             padding: 30px;
         }
-
         .service-content h3 {
             color: var(--secondary);
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
-
-        /* Projects Teaser Section */
         .projects-teaser {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
             color: white;
@@ -844,31 +795,25 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             padding: 100px 20px;
             position: relative;
         }
-
         .projects-teaser-content {
             max-width: 600px;
             margin: 0 auto;
             position: relative;
             z-index: 2;
         }
-
         .projects-teaser h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-
         .projects-teaser p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0.9;
         }
-
-        /* Projects Page */
         .projects-page {
             margin-top: 120px;
             min-height: 60vh;
         }
-
         .projects-hero {
             height: 40vh;
             background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80');
@@ -881,45 +826,37 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             color: white;
             padding: 0 20px;
         }
-
         .projects-hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
         }
-
         .projects-hero p {
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
         }
-
-        /* Projects Gallery Area - UPDATED FOR ORIGINAL IMAGE SIZES */
         .projects-gallery {
             max-width: 1400px;
             margin: 50px auto;
             padding: 0 20px;
         }
-
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 25px;
         }
-
         .gallery-item {
             position: relative;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             background: white;
-            /* Removed aspect-ratio to allow natural height */
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 10px;
         }
-
         .gallery-item img {
             width: auto;
             max-width: 100%;
@@ -929,12 +866,9 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             display: block;
             transition: transform 0.5s;
         }
-
         .gallery-item:hover img {
             transform: scale(1.02);
         }
-
-        /* Call to Action Section */
         .cta-section {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
             color: white;
@@ -942,24 +876,19 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             padding: 80px 20px;
             margin-top: 50px;
         }
-
         .cta-content {
             max-width: 600px;
             margin: 0 auto;
         }
-
         .cta-content h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-
         .cta-content p {
             font-size: 1.1rem;
             margin-bottom: 30px;
             opacity: 0.9;
         }
-
-        /* Contact Form */
         .contact-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -967,25 +896,21 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 50px;
         }
-
         .contact-form {
             background-color: white;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
-
         .form-group {
             margin-bottom: 20px;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
             color: var(--secondary);
         }
-
         .form-control {
             width: 100%;
             padding: 14px;
@@ -994,18 +919,14 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             font-size: 16px;
             transition: border 0.3s;
         }
-
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
         }
-
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
         }
-
-        /* Success Message */
         .form-success {
             background-color: #d4edda;
             color: #155724;
@@ -1015,25 +936,20 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             text-align: center;
             display: none;
         }
-
         .form-success.show {
             display: block;
             animation: fadeIn 0.5s;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
-        /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
             padding: 60px 5% 30px;
             margin-top: auto;
         }
-
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1043,38 +959,31 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             padding-bottom: 40px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .footer-logo-section {
             display: flex;
             flex-direction: column;
         }
-
         .footer-logo {
             margin-bottom: 20px;
         }
-
         .footer-logo-image {
             height: 70px;
             width: auto;
             max-width: 250px;
             object-fit: contain;
         }
-
         .footer-about {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 20px;
         }
-
         .contact-info h3, .quick-links h3 {
             font-size: 1.3rem;
             margin-bottom: 20px;
             color: white;
         }
-
         .contact-details {
             list-style: none;
         }
-
         .contact-details li {
             margin-bottom: 15px;
             display: flex;
@@ -1082,164 +991,128 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             gap: 10px;
             color: rgba(255, 255, 255, 0.7);
         }
-
         .contact-details li .icon {
             color: var(--primary);
             margin-top: 5px;
         }
-
         .quick-links ul {
             list-style: none;
         }
-
         .quick-links ul li {
             margin-bottom: 12px;
         }
-
         .quick-links ul li a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s;
             cursor: pointer;
         }
-
         .quick-links ul li a:hover {
             color: var(--primary);
         }
-
         .copyright {
             text-align: center;
             padding-top: 30px;
             color: rgba(255, 255, 255, 0.5);
             font-size: 0.9rem;
         }
-
-        /* Responsive Design */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 2.8rem;
             }
-            
             nav ul {
                 gap: 20px;
             }
         }
-
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 padding: 15px 20px;
                 gap: 15px;
             }
-            
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 15px;
             }
-            
             .hero {
                 margin-top: 130px;
                 height: 80vh;
             }
-            
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
             .section {
                 padding: 70px 20px;
             }
-            
             .section-title h2 {
                 font-size: 2rem;
             }
-            
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
             .services-grid {
                 grid-template-columns: 1fr;
             }
-            
             .contact-form {
                 padding: 30px 20px;
             }
-            
             .projects-hero {
                 height: 30vh;
             }
-            
             .projects-hero h1 {
                 font-size: 2.2rem;
             }
-            
             .projects-teaser {
                 padding: 70px 20px;
             }
-            
             .projects-teaser h2 {
                 font-size: 2rem;
             }
-            
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-            
             .gallery-item img {
                 max-height: 70vh;
             }
-            
             .footer-content {
                 grid-template-columns: 1fr;
             }
         }
-
         @media (max-width: 576px) {
             .hero h1 {
                 font-size: 1.8rem;
             }
-            
             .hero p {
                 font-size: 1rem;
             }
-            
             .projects-hero {
                 height: 25vh;
                 padding: 20px;
             }
-            
             .projects-hero h1 {
                 font-size: 1.8rem;
             }
-            
             .cta-content h2 {
                 font-size: 2rem;
             }
-            
             .projects-teaser h2 {
                 font-size: 1.8rem;
             }
-            
             .logo-image {
                 height: 50px;
             }
-            
             .footer-logo-image {
                 height: 60px;
             }
-            
             .gallery-item {
                 padding: 5px;
             }
-            
             .gallery-item img {
                 max-height: 60vh;
             }
         }
-
         .text-center {
             text-align: center;
         }
@@ -1259,8 +1132,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
         </nav>
         <a class="nav-btn" onclick="showPage('contact')">Contact Us</a>
     </header>
-
-    <!-- Home Page -->
     <div id="homePage" class="page active">
         <main id="main-content">
             <section class="hero">
@@ -1288,7 +1159,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     </div>
                 </div>
             </section>
-            
             <section class="section services">
                 <div class="section-title">
                     <h2>Our Services</h2>
@@ -1333,8 +1203,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     </div>
                 </div>
             </section>
-            
-            <!-- Projects Teaser Section -->
             <section class="projects-teaser">
                 <div class="projects-teaser-content">
                     <h2>Want to see our recent projects?</h2>
@@ -1343,7 +1211,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                 </div>
             </section>
         </main>
-        
         <footer>
             <div class="footer-content">
                 <div class="footer-logo-section">
@@ -1352,7 +1219,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     </div>
                     <p class="footer-about">Quality construction services for residential, commercial, and industrial projects with several years of experience.</p>
                 </div>
-
                 <div class="contact-info">
                     <h3>Contact Us</h3>
                     <ul class="contact-details">
@@ -1364,7 +1230,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                         <li><span class="icon">🕐</span> Mon-Fri: 8:00 AM - 6:00 PM</li>
                     </ul>
                 </div>
-
                 <div class="quick-links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -1374,14 +1239,11 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     </ul>
                 </div>
             </div>
-
             <div class="copyright">
                 <p>&copy; 2025 HomeStead Remodeling. All rights reserved.</p>
             </div>
         </footer>
     </div>
-
-    <!-- Projects Page -->
     <div id="projectsPage" class="page">
         <section class="projects-hero">
             <div class="projects-hero-content">
@@ -1389,7 +1251,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                 <p>Browse through our completed construction projects</p>
             </div>
         </section>
-
         <section class="projects-page">
             <div class="projects-gallery">
                 <div class="gallery-grid">
@@ -1581,8 +1442,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     </div>
                 </div>
             </div>
-
-            <!-- Call to Action Section -->
             <section class="cta-section">
                 <div class="cta-content">
                     <h2>Need your house to be renovated?</h2>
@@ -1591,7 +1450,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                 </div>
             </section>
         </section>
-        
         <footer>
             <div class="footer-content">
                 <div class="footer-logo-section">
@@ -1600,7 +1458,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     </div>
                     <p class="footer-about">Quality construction services for residential, commercial, and industrial projects with several years of experience.</p>
                 </div>
-
                 <div class="contact-info">
                     <h3>Contact Us</h3>
                     <ul class="contact-details">
@@ -1612,7 +1469,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                         <li><span class="icon">🕐</span> Mon-Fri: 8:00 AM - 6:00 PM</li>
                     </ul>
                 </div>
-
                 <div class="quick-links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -1622,14 +1478,11 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     </ul>
                 </div>
             </div>
-
             <div class="copyright">
                 <p>&copy; 2025 HomeStead Remodeling. All rights reserved.</p>
             </div>
         </footer>
     </div>
-
-    <!-- Contact Page -->
     <div id="contactPage" class="page">
         <section class="section" style="margin-top: 100px;">
             <div class="section-title">
@@ -1647,22 +1500,18 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                         <input type="hidden" name="_subject" value="New Contact Form Submission from Construction Website">
                         <input type="hidden" name="_replyto" id="replytoInput">
                         <input type="hidden" name="_cc" value="abc@123.com">
-
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
-
                         <div class="form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
                         </div>
-
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone" class="form-control" placeholder="(123) 456-7890">
                         </div>
-
                         <div class="form-group">
                             <label for="project">Project Type *</label>
                             <select id="project" name="project" class="form-control" required>
@@ -1674,12 +1523,10 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                                 <option value="other">Other</option>
                             </select>
                         </div>
-
                         <div class="form-group">
                             <label for="message">Your Message *</label>
                             <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project..." required></textarea>
                         </div>
-
                         <button type="submit" class="btn btn-primary" style="width: 100%;">
                             <span id="submitText">Send Message</span>
                             <div id="loadingSpinner" style="display: none;">
@@ -1690,7 +1537,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                 </div>
             </div>
         </section>
-        
         <footer>
             <div class="footer-content">
                 <div class="footer-logo-section">
@@ -1699,7 +1545,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     </div>
                     <p class="footer-about">Quality construction services for residential, commercial, and industrial projects with over 15 years of experience.</p>
                 </div>
-
                 <div class="contact-info">
                     <h3>Contact Us</h3>
                     <ul class="contact-details">
@@ -1711,7 +1556,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                         <li><span class="icon">🕐</span> Mon-Fri: 8:00 AM - 6:00 PM</li>
                     </ul>
                 </div>
-
                 <div class="quick-links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -1729,50 +1573,33 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
     </div>
 
     <script>
-        // Page Management
         function showPage(pageId) {
-            // Hide all pages
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
-            
-            // Show selected page
             const pageElement = document.getElementById(pageId + 'Page');
             if (pageElement) {
                 pageElement.classList.add('active');
             }
-            
-            // Scroll to top
             window.scrollTo(0, 0);
-            
-            // Initialize animations for the page
             setTimeout(initAnimations, 100);
-            
-            // Initialize gallery images if on projects page
             if (pageId === 'projects') {
                 setTimeout(initGalleryImages, 300);
             }
         }
-
-        // Initialize on load
         document.addEventListener('DOMContentLoaded', function() {
             setupEventListeners();
             initAnimations();
-            
-            // Initialize gallery images if on projects page initially
             if (document.getElementById('projectsPage').classList.contains('active')) {
                 setTimeout(initGalleryImages, 300);
             }
         });
 
         function setupEventListeners() {
-            // Contact Form Submission
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
                 contactForm.addEventListener('submit', handleFormSubmit);
             }
-            
-            // Email input for reply-to
             const emailInput = document.getElementById('email');
             if (emailInput) {
                 emailInput.addEventListener('input', function() {
@@ -1782,16 +1609,11 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                     }
                 });
             }
-            
-            // Scroll animations
             window.addEventListener('scroll', checkScroll);
         }
-
-        // Gallery Image Loading
         function initGalleryImages() {
             const images = document.querySelectorAll('.gallery-item img');
             images.forEach(img => {
-                // Check if image is already loaded
                 if (img.complete) {
                     console.log(`Image loaded: ${img.naturalWidth} x ${img.naturalHeight}`);
                 } else {
@@ -1804,25 +1626,19 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                 }
             });
         }
-
-        // Contact Form Handling
         async function handleFormSubmit(e) {
             e.preventDefault();
-            
             const email = document.getElementById('email').value;
             const replytoInput = document.getElementById('replytoInput');
             if (replytoInput) {
                 replytoInput.value = email;
             }
-            
             const submitText = document.getElementById('submitText');
             const loadingSpinner = document.getElementById('loadingSpinner');
             if (submitText) submitText.style.display = 'none';
             if (loadingSpinner) loadingSpinner.style.display = 'block';
-            
             const form = e.target;
             const formData = new FormData(form);
-            
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
@@ -1831,7 +1647,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                         'Accept': 'application/json'
                     }
                 });
-                
                 if (response.ok) {
                     const successMessage = document.getElementById('successMessage');
                     if (successMessage) {
@@ -1856,8 +1671,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                 if (loadingSpinner) loadingSpinner.style.display = 'none';
             }
         }
-
-        // Animation Functions
         function initAnimations() {
             checkScroll();
         }
@@ -1870,11 +1683,9 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
             if (aboutText && isElementInViewport(aboutText)) {
                 aboutText.classList.add('animated');
             }
-            
             if (aboutImage && isElementInViewport(aboutImage)) {
                 aboutImage.classList.add('animated');
             }
-            
             serviceCards.forEach((card, index) => {
                 if (isElementInViewport(card)) {
                     setTimeout(() => {
@@ -1883,7 +1694,6 @@ https://github.com/HomeStead-Remodeling/Page/blob/main/To_visitor.md I've left y
                 }
             });
         }
-
         function isElementInViewport(el) {
             if (!el) return false;
             
